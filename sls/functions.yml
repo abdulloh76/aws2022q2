@@ -5,7 +5,7 @@ getProducts:
         method: get
         path: products
         cors: true
-        private: true
+        private: false
 getProductById:
   handler: src/products/handlers/getProductById.handler
   events:
@@ -13,4 +13,4 @@ getProductById:
         method: get
         path: products/{productId}
         cors: true
-        private: true
+        private: false
