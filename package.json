@@ -5,5 +5,8 @@
   "repository": "git@github.com:abdulloh76/nodejs-aws2022q2.git",
   "author": "Abdullokh Musaev <musayevabdulloh76@gmail.com>",
   "license": "MIT",
-  "type": "module"
+  "type": "module",
+  "scripts": {
+    "deploy": "serverless deploy"
+  }
 }
