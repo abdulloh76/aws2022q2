@@ -1,4 +1,4 @@
-const products = [
+export const products = [
   {
     id: 1,
     name: "MacbookAir M2",
@@ -14,5 +14,3 @@ const products = [
     image: "m2pro.jpg",
   },
 ];
-
-export default products;

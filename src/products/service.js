@@ -1,11 +1,9 @@
-import { getAll, getById } from "./repository.js";
+import { getAll, findById } from "./repository.js";
 
-const getAllProducts = () => {
+export const getAllProducts = () => {
   return Promise.resolve(getAll());
 };
 
-const findProductById = (id) => {
-  return Promise.resolve(getById(id));
+export const findProductById = (id) => {
+  return Promise.resolve(findById(id));
 };
-
-export { getAllProducts, findProductById };

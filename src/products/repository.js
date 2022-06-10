@@ -1,11 +1,9 @@
-import products from "../mocks/products.js";
+import { products } from "../mocks/products.js";
 
-const getAll = () => {
+export const getAll = () => {
   return products;
 };
 
-const findById = (id) => {
+export const findById = (id) => {
   return products.find((product) => product.id === id);
 };
-
-export { getAll, getById };

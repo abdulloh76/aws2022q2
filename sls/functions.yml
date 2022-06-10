@@ -1,0 +1,18 @@
+getProducts:
+  handler: src/products/handlers/getProducts.handler
+  name: ${self:custom.namePrefix}-get-products-handler
+  events:
+    - http:
+        method: get
+        path: products
+        cors: true
+        private: true
+getProductById:
+  handler: src/products/handlers/getProductById.handler
+  name: ${self:custom.namePrefix}-get-product-handler
+  events:
+    - http:
+        method: get
+        path: products/{productId}
+        cors: true
+        private: true
