@@ -1,13 +1,13 @@
-getProducts:
-  handler: src/products/handlers/getProducts.handler
+getProductsList:
+  handler: src/products/handlers/getProductsList.handler
   events:
     - http:
         method: get
         path: products
         cors: true
         private: false
-getProductById:
-  handler: src/products/handlers/getProductById.handler
+getProductsById:
+  handler: src/products/handlers/getProductsById.handler
   events:
     - http:
         method: get

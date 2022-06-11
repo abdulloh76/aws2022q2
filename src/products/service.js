@@ -4,6 +4,6 @@ export const getAllProducts = () => {
   return Promise.resolve(getAll());
 };
 
-export const findProductById = (id) => {
+export const findProductsById = (id) => {
   return Promise.resolve(findById(id));
 };
