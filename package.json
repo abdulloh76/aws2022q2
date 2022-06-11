@@ -1,0 +1,23 @@
+{
+  "name": "nodejs-aws2022q2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:abdulloh76/nodejs-aws2022q2.git",
+  "author": "Abdullokh Musaev <musayevabdulloh76@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "deploy": "serverless deploy",
+    "test": "node --experimental-modules --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "dependencies": {
+    "jest": "^28.1.1"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+      "./test/setup.js"
+    ],
+    "transform": {}
+  }
+}

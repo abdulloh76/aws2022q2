@@ -1,0 +1,86 @@
+---
+swagger: "2.0"
+info:
+  version: "2022-06-11T07:57:43Z"
+  title: "dev-nodejs-aws2022q2"
+host: "6cnz499bcf.execute-api.us-east-1.amazonaws.com"
+basePath: "/dev"
+schemes:
+  - "https"
+paths:
+  /products:
+    get:
+      tags:
+        - "Product"
+      summary: "get list of products"
+      description: "Retrieve the list of products"
+      operationId: "getProductsList"
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      responses:
+        "200":
+          description: "200 success"
+          schema:
+            type: "object"
+            properties:
+              products:
+                type: array
+                items:
+                  $ref: "#/definitions/Product"
+  /products/{productId}:
+    get:
+      tags:
+        - "Product"
+      summary: "get products by id"
+      description: "get products by id"
+      operationId: "getProductsById"
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - in: "path"
+          name: "productId"
+          description: "productId"
+          required: true
+          type: string
+      responses:
+        "200":
+          description: "Success"
+          schema:
+            type: object
+            properties:
+              product:
+                $ref: "#/definitions/Product"
+        "404":
+          description: "product wiht id not found"
+          schema:
+            $ref: "#/definitions/Error"
+definitions:
+  Error:
+    type: "object"
+    properties:
+      message:
+        type: "string"
+        description: "Error message"
+  Product:
+    type: "object"
+    properties:
+      id:
+        type: number
+        description: The auto-generated id of the product
+        example: 1
+      description:
+        type: string
+        description: description of the product
+        example: New MacbookAir with M2 chip, incredibly thin and light
+      price:
+        type: number
+        description: price of product
+        example: 1200
+      image:
+        type: string
+        description: link to the image
+        example: m2air.jpg

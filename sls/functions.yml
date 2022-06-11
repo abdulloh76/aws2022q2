@@ -1,0 +1,16 @@
+getProductsList:
+  handler: src/products/handlers/getProductsList.handler
+  events:
+    - http:
+        method: get
+        path: products
+        cors: true
+        private: false
+getProductsById:
+  handler: src/products/handlers/getProductsById.handler
+  events:
+    - http:
+        method: get
+        path: products/{productId}
+        cors: true
+        private: false

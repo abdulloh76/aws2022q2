@@ -1,0 +1,72 @@
+export const products = [
+  {
+    id: 1,
+    name: "MacbookAir M2",
+    desctiption: "New MacbookAir with M2 chip, incredibly thin and light",
+    price: 1200,
+    image: "",
+  },
+  {
+    id: 2,
+    name: "MacbookPro M2",
+    desctiption: "New MacbookPro with M2 chip, more powerful",
+    price: 1500,
+    image: "",
+  },
+  {
+    id: 3,
+    name: "MacbookAir 2020",
+    price: 999,
+    description: "MacbookAir with M1 chip",
+    image: "",
+  },
+  {
+    id: 4,
+    name: "MacbookPro 2020",
+    description: "MacbookPro with M1 chip",
+    price: 1250,
+    image: "",
+  },
+  {
+    id: 5,
+    name: "MacbookPro14 2022",
+    description: "MacbookPro14 with M1Pro chip",
+    price: 2000,
+    image: "",
+  },
+  {
+    id: 6,
+    name: "MacbookPro16 2022",
+    description: "MacbookPro16 with M1Pro chip",
+    price: 2500,
+    image: "",
+  },
+  {
+    id: 7,
+    name: "HONOR MagicBook14",
+    description: "HONOR MagicBook14 light laptop with windows",
+    price: 500,
+    image: "",
+  },
+  {
+    id: 8,
+    name: "HONOR MagicBook16",
+    description: "HONOR MagicBook16 light laptop with windows",
+    price: 700,
+    image: "",
+  },
+  {
+    id: 9,
+    name: "Huawei MagicBook15",
+    description: "HONOR MagicBook15 light laptop with windows",
+    price: 600,
+    image: "",
+  },
+  {
+    id: 10,
+    name: "Asus Vivobook Go15",
+    description: "Asus Vivobook Go15 light laptop with windows",
+    price: 500,
+    image: "",
+  }
+];
