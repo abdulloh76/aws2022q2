@@ -16,7 +16,8 @@ export const handler = async (event) => {
     return {
       statusCode: 404,
       headers: {
-        "Access-Control-Allow-Origin" : "*"
+        "Access-Control-Allow-Origin" : "*",
+        "Access-Control-Allow-Credentials" : true
       },
       body: JSON.stringify({
         error: { message: "product with id not found" }
