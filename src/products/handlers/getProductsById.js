@@ -7,17 +7,19 @@ export const handler = async (event) => {
   if (product) {
     return {
       statusCode: 200,
-      body: JSON.stringify({
-        product,
-        event,
-      }),
+      headers: {
+        "Access-Control-Allow-Origin" : "*"
+      },
+      body: JSON.stringify(product),
     };
   } else {
     return {
       statusCode: 404,
+      headers: {
+        "Access-Control-Allow-Origin" : "*"
+      },
       body: JSON.stringify({
-        error: { message: "product with id not found" },
-        event,
+        error: { message: "product with id not found" }
       }),
     };
   }
