@@ -5,5 +5,5 @@ export const getAll = () => {
 };
 
 export const findById = (id) => {
-  return products.find((product) => product.id === id);
+  return products.find((product) => product.id === Number(id));
 };

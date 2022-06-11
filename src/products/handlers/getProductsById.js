@@ -1,7 +1,7 @@
 import { findProductsById } from "../service.js";
 
 export const handler = async (event) => {
-  const productId = event.pathParameters?.productId;
+  const { productId = "" } = event.pathParameters;
   const product = await findProductsById(productId);
 
   if (product) {
