@@ -16,9 +16,7 @@ import (
 type Response events.APIGatewayProxyResponse
 
 func Handler(ctx context.Context, request events.APIGatewayProxyRequest) (Response, error) {
-	config.LoadConfig(".")
-	envs := config.GetEnvConfigs()
-	db, err := config.GetConnection(envs)
+	db, err := config.GetConnection()
 	if err != nil {
 		return Response{StatusCode: 500}, err
 	}

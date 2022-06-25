@@ -5,8 +5,8 @@ import (
 	"gorm.io/gorm"
 )
 
-func GetConnection(envs *ConfigVariables) (db *gorm.DB, err error) {
-	dsn := envs.POSTGRES_URI
+func GetConnection() (db *gorm.DB, err error) {
+	dsn := "postgres://user:password@host:5432/db"
 
 	return gorm.Open(postgres.Open(dsn), &gorm.Config{})
 }
