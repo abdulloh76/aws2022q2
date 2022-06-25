@@ -6,7 +6,7 @@ import (
 )
 
 func GetConnection(envs *ConfigVariables) (db *gorm.DB, err error) {
-	dsn := envs.DOCKER_POSTGRES_URI
+	dsn := envs.POSTGRES_URI
 
 	return gorm.Open(postgres.Open(dsn), &gorm.Config{})
 }
