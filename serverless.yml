@@ -56,18 +56,24 @@ package:
     - ./bin/**
 
 functions:
-  hello:
-    handler: bin/hello
+  getProductsList:
+    handler: bin/getProductsList
     events:
       - httpApi:
-          path: /hello
+          path: /products
           method: get
-  world:
-    handler: bin/world
+  getProductById:
+    handler: bin/getProductById
     events:
       - httpApi:
-          path: /world
+          path:  /products/{productId}
           method: get
+  createProduct:
+    handler: bin/createProduct
+    events:
+      - httpApi:
+          path: /products
+          method: post
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
