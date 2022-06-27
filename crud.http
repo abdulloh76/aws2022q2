@@ -1,0 +1,18 @@
+# @rootUrl = http://localhost:8080
+@rootUrl = https://kxjje3nmpc.execute-api.us-east-1.amazonaws.com/dev
+
+get {{rootUrl}}/products
+
+###
+get {{rootUrl}}/products/FYT66oqng
+
+###
+post {{rootUrl}}/products
+Content-Type: application/json
+
+{
+  "count": 10,
+  "title": "MacbookAir M2",
+  "description": "New MacbookAir with M2 chip, incredibly thin and light",
+  "price": 1200
+}

@@ -3,6 +3,7 @@ package main
 import (
 	"awsshop/config"
 	"awsshop/internal/entity"
+	"awsshop/internal/productDto"
 	"awsshop/internal/repository"
 	"bytes"
 	"context"
@@ -31,10 +32,11 @@ func Handler(ctx context.Context, request events.APIGatewayProxyRequest) (Respon
 	if err != nil {
 		return Response{StatusCode: 404}, err
 	}
+	dto := productDto.EntitytoResponsetDTO(&product)
 
 	var buf bytes.Buffer
 	body, err := json.Marshal(map[string]interface{}{
-		"data": product,
+		"data": dto,
 	})
 	if err != nil {
 		return Response{StatusCode: 500}, err
