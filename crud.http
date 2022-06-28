@@ -4,7 +4,7 @@
 get {{rootUrl}}/products
 
 ###
-get {{rootUrl}}/products/FYT66oqng
+get {{rootUrl}}/products/1eErEPq7g
 
 ###
 post {{rootUrl}}/products

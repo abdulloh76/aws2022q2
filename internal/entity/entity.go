@@ -10,8 +10,7 @@ import (
 type Product struct {
 	gorm.Model
 	ID          string
-	StockId     *uint64
-	Stock       Stock `gorm:"embedded;constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
+	Stock       Stock `gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
 	Title       string
 	Description string
 	Price       float32
@@ -19,8 +18,9 @@ type Product struct {
 
 type Stock struct {
 	gorm.Model
-	ID    uint64
-	Count uint64
+	ID        uint64
+	Count     uint64
+	ProductID string
 }
 
 func (invoice *Product) BeforeCreate(tx *gorm.DB) (err error) {

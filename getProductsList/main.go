@@ -20,8 +20,8 @@ func Handler(ctx context.Context) (Response, error) {
 		return Response{StatusCode: 500}, err
 	}
 
-	db.AutoMigrate(&entity.Stock{})
 	db.AutoMigrate(&entity.Product{})
+	db.AutoMigrate(&entity.Stock{})
 	products, _ := repository.FindProducts(db)
 
 	var buf bytes.Buffer

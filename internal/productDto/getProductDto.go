@@ -7,7 +7,6 @@ type ProductResponse struct {
 	Count       uint64  `json:"count"`
 	Title       string  `json:"title"`
 	Description string  `json:"description"`
-	StockId     uint64  `json:"stockId"`
 	Price       float32 `json:"price"`
 }
 
