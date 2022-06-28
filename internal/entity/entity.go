@@ -11,7 +11,7 @@ type Product struct {
 	gorm.Model
 	ID          string
 	StockId     *uint64
-	Stock       Stock `gorm:"embedded"`
+	Stock       Stock `gorm:"embedded;constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
 	Title       string
 	Description string
 	Price       float32
