@@ -1,0 +1,24 @@
+getProductsList:
+  handler: bin/getProductsList
+  events:
+    - http:
+        method: get
+        path: products
+        cors: true
+        private: false
+getProductById:
+  handler: bin/getProductById
+  events:
+    - http:
+        method: get
+        path: products/{productId}
+        cors: true
+        private: false
+createProduct:
+  handler: bin/createProduct
+  events:
+    - http:
+        method: post
+        path: products
+        cors: true
+        private: false
