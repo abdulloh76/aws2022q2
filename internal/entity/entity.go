@@ -19,9 +19,8 @@ type Product struct {
 
 type Stock struct {
 	gorm.Model
-	ID        uint64
-	ProductID string
-	Count     uint64
+	ID    uint64
+	Count uint64
 }
 
 func (invoice *Product) BeforeCreate(tx *gorm.DB) (err error) {

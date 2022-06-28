@@ -8,7 +8,6 @@ import (
 	"bytes"
 	"context"
 	"encoding/json"
-	"fmt"
 
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
@@ -27,7 +26,6 @@ func Handler(ctx context.Context, request events.APIGatewayProxyRequest) (Respon
 
 	vars := request.PathParameters
 	id := vars["productId"]
-	fmt.Println(id)
 	product, err := repository.FindProductById(db, id)
 	if err != nil {
 		return Response{StatusCode: 404}, err

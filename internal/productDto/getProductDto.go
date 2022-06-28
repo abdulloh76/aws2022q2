@@ -3,15 +3,17 @@ package productDto
 import "awsshop/internal/entity"
 
 type ProductResponse struct {
-	ID          string
-	Count       uint64
-	Title       string
-	Description string
-	Price       float32
+	ID          string  `json:"id"`
+	Count       uint64  `json:"count"`
+	Title       string  `json:"title"`
+	Description string  `json:"description"`
+	StockId     uint64  `json:"stockId"`
+	Price       float32 `json:"price"`
 }
 
 func EntitytoResponsetDTO(product *entity.Product) ProductResponse {
 	getProductDto := ProductResponse{
+		ID:          product.ID,
 		Title:       product.Title,
 		Description: product.Description,
 		Price:       product.Price,
